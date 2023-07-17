@@ -1,0 +1,35 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+   http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="create_table_role" author="liquibase">
+        <createTable tableName="role">
+            <column name="id" type="UUID">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="title" type="varchar(128)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="title_1"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="insert_role_in_table" author="liquibase">
+        <insert tableName="role">
+            <column name="id" value="ea0e6344-2163-44b7-8171-16d124ce2b64"/>
+            <column name="title" value="ADMIN"/>
+        </insert>
+        <insert tableName="role">
+            <column name="id" value="c6945e13-95dc-4232-a048-e6db9e4798e8"/>
+            <column name="title" value="CUSTOMER"/>
+        </insert>
+        <insert tableName="role">
+            <column name="id" value="762368ef-2b11-4f4c-a4a9-afd3c2b391be"/>
+            <column name="title" value="MANAGER"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
