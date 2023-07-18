@@ -22,6 +22,12 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
+    public Role findRoleById(UUID id) {
+        return roleRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Role not found"));
+    }
+
+    @Override
     public UUID saveRole(Role role) {
         return roleRepository.save(role).getId();
     }

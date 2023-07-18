@@ -1,0 +1,52 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+   http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="insert_value_in_person_role_table" author="liquibase">
+        <insert tableName="person_role">
+            <column name="person_id" value="8145b416-e0e3-4d32-b028-8e6f03bc7bff"/>
+            <column name="role_id" value="c6945e13-95dc-4232-a048-e6db9e4798e8"/>
+        </insert>
+        <insert tableName="person_role">
+            <column name="person_id" value="0b68855a-09e6-4fb4-be9d-b21dd9510299"/>
+            <column name="role_id" value="c6945e13-95dc-4232-a048-e6db9e4798e8"/>
+        </insert>
+        <insert tableName="person_role">
+            <column name="person_id" value="34c70613-28ff-4cf1-9456-846ee1f309c0"/>
+            <column name="role_id" value="c6945e13-95dc-4232-a048-e6db9e4798e8"/>
+        </insert>
+        <insert tableName="person_role">
+            <column name="person_id" value="356793d6-4f7b-497b-8099-e5874bc6f1c8"/>
+            <column name="role_id" value="c6945e13-95dc-4232-a048-e6db9e4798e8"/>
+        </insert>
+        <insert tableName="person_role">
+            <column name="person_id" value="fb9207c7-3e36-4181-8523-e920f840fbaa"/>
+            <column name="role_id" value="c6945e13-95dc-4232-a048-e6db9e4798e8"/>
+        </insert>
+        <insert tableName="person_role">
+            <column name="person_id" value="d00f772c-2a98-45de-853b-58d3308e656b"/>
+            <column name="role_id" value="c6945e13-95dc-4232-a048-e6db9e4798e8"/>
+        </insert>
+        <insert tableName="person_role">
+            <column name="person_id" value="bfc02883-8618-4c57-98ce-23cf849141c3"/>
+            <column name="role_id" value="c6945e13-95dc-4232-a048-e6db9e4798e8"/>
+        </insert>
+        <insert tableName="person_role">
+            <column name="person_id" value="2cd4a5d1-c571-4d8b-9339-6ad9509bbf6c"/>
+            <column name="role_id" value="c6945e13-95dc-4232-a048-e6db9e4798e8"/>
+        </insert>
+        <insert tableName="person_role">
+            <column name="person_id" value="1bcc0ebf-7504-401b-ae69-8c79440f0d64"/>
+            <column name="role_id" value="c6945e13-95dc-4232-a048-e6db9e4798e8"/>
+        </insert>
+        <insert tableName="person_role">
+            <column name="person_id" value="61722b83-ac83-4b83-abec-0f55702666b8"/>
+            <column name="role_id" value="c6945e13-95dc-4232-a048-e6db9e4798e8"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

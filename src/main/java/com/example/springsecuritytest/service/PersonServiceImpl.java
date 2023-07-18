@@ -22,6 +22,12 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
+    public Person findPersonById(UUID id) {
+        return personRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Person not found"));
+    }
+
+    @Override
     public UUID savePerson(Person person) {
         return personRepository.save(person).getId();
     }

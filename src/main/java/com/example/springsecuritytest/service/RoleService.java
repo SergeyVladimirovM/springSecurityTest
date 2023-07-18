@@ -7,5 +7,6 @@ import java.util.UUID;
 
 public interface RoleService {
     List<Role> findAllRole();
+    Role findRoleById(UUID id);
     UUID saveRole(Role role);
 }

@@ -7,5 +7,6 @@ import java.util.UUID;
 
 public interface PersonService {
     List<Person> findAllPerson();
+    Person findPersonById(UUID id);
     UUID savePerson(Person person);
 }

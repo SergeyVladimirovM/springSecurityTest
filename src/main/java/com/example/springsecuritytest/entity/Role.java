@@ -15,7 +15,6 @@ public class Role {
     @Column(name = "title", nullable = false, unique = true)
     private String title;
 
-    @JsonIgnore
     @ManyToMany
     @JoinTable (
             name = "person_role",
