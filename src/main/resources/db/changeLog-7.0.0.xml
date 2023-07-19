@@ -1,0 +1,24 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+   http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="rename_title_in_table_role" author="liquibase">
+        <update tableName="role">
+            <column name="title" value="ROLE_ADMIN"/>
+            <where>title = 'ADMIN'</where>
+        </update>
+        <update tableName="role">
+            <column name="title" value="ROLE_MANAGER"/>
+            <where>title = 'MANAGER'</where>
+        </update>
+        <update tableName="role">
+            <column name="title" value="ROLE_CUSTOMER"/>
+            <where>title = 'CUSTOMER'</where>
+        </update>
+    </changeSet>
+</databaseChangeLog>

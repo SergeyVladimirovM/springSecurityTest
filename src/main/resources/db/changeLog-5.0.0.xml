@@ -1,0 +1,59 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+   http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="add_column_password_in_table_person" author="liquibase">
+        <addColumn tableName="person">
+            <column name="password" type="varchar(255)">
+            </column>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="update_value_in_table_person_in_column_password" author="liquibase">
+        <update tableName="person">
+            <column name="password" value="$2a$10$W.Ei04MkNlkY5MWX5hWZzOvGghn5IZ6y9jeLJZsFw2XePbdweC9K6"/>
+            <where>nickname = 'Smile'</where>
+        </update>
+        <update tableName="person">
+            <column name="password" value="$2a$10$pIiET/XQNttW2A/HNvtghOOhdvUdzrC4v/A8U0x/ve1zzqONVZTyS"/>
+            <where>nickname = 'SS'</where>
+        </update>
+        <update tableName="person">
+            <column name="password" value="$2a$10$6PCkrAZdrVHKkotiqO/ylOZ5J0.DUFI7r71fXLVfGIdp1prpuXqTS"/>
+            <where>nickname = 'Aza'</where>
+        </update>
+        <update tableName="person">
+            <column name="password" value="$2a$10$/nrn5aAE3MflkjhaT3AjMenCF4osjDJdcGKksoGSM60h9h/mgdSwu"/>
+            <where>nickname = 'VV'</where>
+        </update>
+        <update tableName="person">
+            <column name="password" value="$2a$10$psZ3JcU7bgz9n5rZwAkBM.Nw6cpG6TBuGyMqCP2DFJaHxHfW/zAZ6"/>
+            <where>nickname = 'DG'</where>
+        </update>
+        <update tableName="person">
+            <column name="password" value="$2a$10$S9J8yaHKOAEyxemWPqGvLurl25RKFsLg0ltNTYBSbMxLIiNU1ixRS"/>
+            <where>nickname = 'EE'</where>
+        </update>
+        <update tableName="person">
+            <column name="password" value="$2a$10$gCNS4QS6zR2tnCOyc8y9g.5jZLPHT/jWSOimrgZHZms.SxOPYKlV."/>
+            <where>nickname = 'KS'</where>
+        </update>
+        <update tableName="person">
+            <column name="password" value="$2a$10$QVC1Nnv/.5odrL8ZY60vMeEZw6w9WYuf/UjnhAERv6Hs0s6zo9sf."/>
+            <where>nickname = 'AS'</where>
+        </update>
+        <update tableName="person">
+            <column name="password" value="$2a$10$2POX4HUt6btnDx3.3tjvHuxer0jQjSWRiQwFqmI2jIb5ZJm7kF4Eq"/>
+            <where>nickname = 'AA'</where>
+        </update>
+        <update tableName="person">
+            <column name="password" value="$2a$10$HbLDDrulA2UhPaRGEtHXW.Ah37hfUwaqzRrP00.HilMbnBXiXLUvC"/>
+            <where>nickname = 'NK'</where>
+        </update>
+    </changeSet>
+</databaseChangeLog>

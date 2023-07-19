@@ -1,0 +1,20 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+   http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="insert_value_in_person_role_table_admin_and_manager" author="liquibase">
+        <insert tableName="person_role">
+            <column name="person_id" value="8145b416-e0e3-4d32-b028-8e6f03bc7bff"/>
+            <column name="role_id" value="ea0e6344-2163-44b7-8171-16d124ce2b64"/>
+        </insert>
+        <insert tableName="person_role">
+            <column name="person_id" value="34c70613-28ff-4cf1-9456-846ee1f309c0"/>
+            <column name="role_id" value="762368ef-2b11-4f4c-a4a9-afd3c2b391be"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

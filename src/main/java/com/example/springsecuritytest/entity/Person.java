@@ -19,7 +19,9 @@ public class Person {
     private String lastName;
     @Column(name = "city")
     private String city;
-    @ManyToMany(cascade = CascadeType.ALL)
+    @Column(name = "password")
+    private String password;
+    @ManyToMany
     @JoinTable(
             name = "person_role",
             joinColumns = @JoinColumn(name = "person_id"),
@@ -68,6 +70,14 @@ public class Person {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public List<Role> getRoleList() {
