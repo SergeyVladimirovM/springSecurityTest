@@ -1,0 +1,72 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+   http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="create_table_product" author="liquibase">
+        <createTable tableName="product">
+            <column name="id" type="serial">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="title" type="varchar(128)"/>
+            <column name="price" type="int"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="insert_products_in_table_product" author="liquibase">
+    <insert tableName="product">
+        <column name="id" value="1"/>
+        <column name="title" value="Meat"/>
+        <column name="price" value="538"/>
+    </insert>
+    <insert tableName="product">
+        <column name="id" value="2"/>
+        <column name="title" value="Bread"/>
+        <column name="price" value="28"/>
+    </insert>
+    <insert tableName="product">
+        <column name="id" value="3"/>
+        <column name="title" value="Milk"/>
+        <column name="price" value="45"/>
+    </insert>
+    <insert tableName="product">
+        <column name="id" value="4"/>
+        <column name="title" value="Coffee"/>
+        <column name="price" value="187"/>
+    </insert>
+    <insert tableName="product">
+        <column name="id" value="5"/>
+        <column name="title" value="Coca-cola"/>
+        <column name="price" value="56"/>
+    </insert>
+    <insert tableName="product">
+        <column name="id" value="6"/>
+        <column name="title" value="Cheese"/>
+        <column name="price" value="264"/>
+    </insert>
+    <insert tableName="product">
+        <column name="id" value="7"/>
+        <column name="title" value="Sausage"/>
+        <column name="price" value="135"/>
+    </insert>
+    <insert tableName="product">
+        <column name="id" value="8"/>
+        <column name="title" value="Pasta"/>
+        <column name="price" value="81"/>
+    </insert>
+    <insert tableName="product">
+        <column name="id" value="9"/>
+        <column name="title" value="Tomato"/>
+        <column name="price" value="201"/>
+    </insert>
+    <insert tableName="product">
+        <column name="id" value="10"/>
+        <column name="title" value="Banana"/>
+        <column name="price" value="53"/>
+    </insert>
+    </changeSet>
+</databaseChangeLog>

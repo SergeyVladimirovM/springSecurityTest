@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" th:href="@{/styles/style.css}">>>
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Page</title>
+</head>
+<body>
+<h2>Persons</h2>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>NickName</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>City</th>
+    </tr>
+    <tr th:each="person: ${personList}">
+        <td th:text="${person.id}"></td>
+        <td th:text="${person.nickName}"></td>
+        <td th:text="${person.firstName}"></td>
+        <td th:text="${person.lastName}"></td>
+        <td th:text="${person.city}"></td>
+    </tr>
+</table>
+
+<h2>Products</h2>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Price</th>
+    </tr>
+    <tr th:each="product: ${productList}">
+        <td th:text="${product.id}"></td>
+        <td th:text="${product.title}"></td>
+        <td th:text="${product.price}"></td>
+    </tr>
+</table>
+</body>
+</html>
