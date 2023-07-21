@@ -22,9 +22,11 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
     private final PersonService personService;
+    private final AuthenticationHandlerCustom authenticationHandlerCustom;
 
-    public SecurityConfig(PersonService personService) {
+    public SecurityConfig(PersonService personService, AuthenticationHandlerCustom authenticationHandlerCustom) {
         this.personService = personService;
+        this.authenticationHandlerCustom = authenticationHandlerCustom;
     }
 
     @Bean
@@ -40,6 +42,7 @@ public class SecurityConfig {
                 .formLogin((form) -> form
                         .defaultSuccessUrl("/")
                         .failureForwardUrl("/login")
+                        .successHandler(authenticationHandlerCustom)
                         .permitAll())
                 .logout((logout) -> logout
                         .logoutSuccessUrl("/")
